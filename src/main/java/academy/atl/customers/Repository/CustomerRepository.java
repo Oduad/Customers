@@ -1,5 +1,4 @@
 package academy.atl.customers.Repository;
-
 import academy.atl.customers.Entity.Customer;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

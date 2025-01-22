@@ -3,11 +3,12 @@ package academy.atl.customers.Controllers;
 import academy.atl.customers.Entity.Customer;
 import academy.atl.customers.Services.CustomerServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
+@RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class CustomerController {
     @Autowired
@@ -28,8 +29,9 @@ public class CustomerController {
         service.removeCustomer(id);
     }
 
+    //@PostMapping(value = "/customer", consumes = MediaType.APPLICATION_JSON_VALUE)
     @PostMapping("/customer")
-    public void addCustomer(Customer customer){
+    public void addCustomer(@RequestBody Customer customer){
         service.addCustomer(customer);
     }
 

@@ -1,8 +1,5 @@
 package academy.atl.customers.Services;
-
 import academy.atl.customers.Entity.Customer;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public interface CustomerService {
