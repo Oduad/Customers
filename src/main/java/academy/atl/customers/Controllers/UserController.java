@@ -1,6 +1,7 @@
 package academy.atl.customers.Controllers;
 import academy.atl.customers.Entity.User;
 import academy.atl.customers.Services.UserServiceImp;
+import academy.atl.customers.Util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -19,6 +20,8 @@ public class UserController {
 
     @GetMapping("/user")        // Traer todos los clientes
     public List<User> getAllUsers(){
+        //public List<User> getAllUsers(String token ){
+        //String userId = JwtUtil.getUserIdByToken(token);
         return service.getAllUsers();
     }
 
